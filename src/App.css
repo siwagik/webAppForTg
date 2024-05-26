@@ -13,3 +13,16 @@ body {
   justify-content: center;
   text-align: center;
 }
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: none;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+button:active {
+  transform: scale(0.94);
+}
