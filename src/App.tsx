@@ -1,21 +1,14 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import './App.css'
-
-const tg = window.Telegram.WebApp;
 
 function App() {
 
-  useEffect(() => {
-    tg.ready();
-  }, [])
-  const onClose = () => {
-    tg.close()
-  }
+  const [count, setCount ] = useState(0)
 
   return (
     <>
-      <h1>Hello world</h1>
-      <button onClick={onClose}>Close</button>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </>
   )
 }
